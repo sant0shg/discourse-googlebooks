@@ -1,0 +1,23 @@
+{{#if model.book}}
+<div class="db-bookdetails">
+    <div class="db-bookimage">
+        {{discussbook-img src=model.book.volumeInfo.imageLinks.smallThumbnail}}
+    </div>
+    <div class="db-bookdetail">
+        <div class="db-title">
+            {{model.book.volumeInfo.title}}
+        </div>
+        <div class="db-other">
+            By {{model.book.volumeInfo.authors}} &nbsp; {{model.book.volumeInfo.publisher}}
+        </div>
+        <div class="db-preview-id" style="display: none;">
+            {{model.book.id}}
+        </div>
+        <div id="db-preview">
+        {{#if model.book.id }}    
+        {{discussbook-preview action="previewBook" actionParam=model.book.id icon="search" label='Preview'}}
+        {{/if}}
+        </div>
+    </div>
+</div>
+{{/if}}

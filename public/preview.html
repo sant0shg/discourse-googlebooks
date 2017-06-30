@@ -1,0 +1,51 @@
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Book Search Embedded Viewer API Example</title>
+    <style>
+        #viewerCanvas{
+            position: absolute;
+            width : 100%;
+            height:100%;
+            top:0;
+            left: 0;
+        }
+        
+    </style>
+  </head>
+  <body>
+      <div id="viewerCanvas"></div>
+    <script type="text/javascript" src="//www.google.com/books/jsapi.js"></script>
+    
+    <script type="text/javascript">
+    var url = window.location.href;
+    var arr = url.match(/([^=&?]+)=([^&]+)/g);
+    var bookid = null;
+    arr.forEach(function(keyvalue,index){
+        var key = keyvalue.split("=")[0];
+        var value = keyvalue.split("=")[1];
+        if(key == "id"){
+            bookid = value;
+        }
+    });
+    
+    // document.getElementById("viewerCanvas").style.height = height;
+      google.books.load();
+
+      function alertInitialized() {
+        //   alert("book successfully loaded and initialized!");
+      }
+
+      function initialize() {
+          var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
+          viewer.load(bookid, null, alertInitialized);
+      }
+
+      google.books.setOnLoadCallback(initialize);
+    </script>
+    
+    
+  </body>
+</html>

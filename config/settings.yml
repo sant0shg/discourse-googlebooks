@@ -1,0 +1,13 @@
+plugins:
+  google_books_enabled:
+    client: true
+    default: false
+    refresh: true
+  google_books_api_key:
+    client: false
+    default: ""
+    refresh: true
+  google_books_referer:
+    client: false
+    default: ""
+    refresh: true

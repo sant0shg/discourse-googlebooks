@@ -1,0 +1,35 @@
+{{this.shouldRender}} 
+{{#if model.showGoogleBooks}}
+      <div class="db-book-composer">
+      <div class="db-book-selection">
+                    <span>Selected book : </span>
+                    <span class="db-book-selection-title" style="font-weight:bold;">
+                      {{#if model.topic.book.volumeInfo.title}}
+                          {{model.topic.book.volumeInfo.title}}
+                      {{/if}}
+                      {{#unless model.topic.book.volumeInfo.title}}
+                          none
+                      {{/unless}}
+                      
+                    </span>
+                    <span class="db-book-selection-id db-dispnone"></span>
+                </div>
+      
+  <div class="db-search-composer">
+      
+    <div class="db-result">
+    </div>
+    
+    <div  class="db-input-field-wrapper">
+      
+      {{ discussbook-search-book tabIndex="4" placeholder="Search book" id="db-book-search"}}
+      <div class="gbookbg">
+      </div>
+      <div class="db-loading">
+      </div>
+    </div>
+    
+  </div>
+      </div>
+ {{/if}}
+  

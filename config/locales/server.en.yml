@@ -1,0 +1,6 @@
+en:
+  google_books_enable_for_category: "Enable google books for this category"
+  site_settings:
+    google_books_enabled: "Enable google books integration"
+    google_books_api_key: "Api key to access google books. Get it from google developers console"
+    google_books_referer: "Usually your site name"
