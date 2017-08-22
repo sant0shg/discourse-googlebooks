@@ -41,7 +41,7 @@ function populateBooks(bookDetails){
 
     if(typeof bookDetails != 'undefined'){
       for(var i = 0;i<bookDetails.length;i++){
-          var imgSrc = "/plugins/googlebooks/images/no_thumb.gif";
+          var imgSrc = "/plugins/discourse-googlebooks/images/no_thumb.gif";
           if(bookDetails[i].volumeInfo.imageLinks){
             imgSrc = bookDetails[i].volumeInfo.imageLinks.thumbnail;
           }
