@@ -57,10 +57,12 @@
       </div>
     </div>
   </section>
+{{#if siteSettings.google_books_enabled}}
     <section class='field'>
       <label class="checkbox-label setting_googlebooks">
         {{input type="checkbox" checked=category.google_books_enabled}}
         {{i18n 'googlebooks.google_books_enable_for_category'}}
       </label>
-  </section>
+    </section>
+{{/if}}
 </form>

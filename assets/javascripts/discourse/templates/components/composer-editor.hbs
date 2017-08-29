@@ -1,3 +1,4 @@
+{{#if siteSettings.google_books_enabled}}
 {{d-editor tabindex="4"
            value=composer.reply
            placeholder="composer.reply_placeholder"
@@ -12,7 +13,22 @@
            validation=validation
            loading=composer.loading
            forcePreview=forcePreview}}
-
+{{/if}}
+{{#unless siteSettings.google_books_enabled}}
+{{d-editor tabindex="4"
+           value=composer.reply
+           placeholder="composer.reply_placeholder"
+           previewUpdated="previewUpdated"
+           markdownOptions=markdownOptions
+           extraButtons="extraButtons"
+           importQuote="importQuote"
+           toggleOptions="toggleOptions"
+           showUploadModal="showUploadModal"
+           togglePreview="togglePreview"
+           validation=validation
+           loading=composer.loading
+           forcePreview=forcePreview}}
+{{/unless}}
 <div class="composer-bottom-right">
   {{#if site.mobileView}}
     <input type="file" id="mobile-uploader" multiple />
