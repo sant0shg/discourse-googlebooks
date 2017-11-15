@@ -42,7 +42,7 @@ export default Ember.Component.extend({
             $(".preview-elem").removeClass("displaynone");
             
             var iframeElement = document.getElementById("previewiframe");
-            iframeElement.setAttribute("src","/plugins/googlebooks/preview.html?id="+bookid+"&h="+(window.outerHeight - 16));
+            iframeElement.setAttribute("src","/plugins/discourse-googlebooks/preview.html?id="+bookid+"&h="+(window.outerHeight - 16));
             
         }
     }else{
