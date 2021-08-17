@@ -1,4 +1,4 @@
-import { default as computed } from 'ember-addons/ember-computed-decorators';
+import discourseComputed from "discourse-common/utils/decorators";
 
 export default Ember.Component.extend({
   // subclasses need this
@@ -9,12 +9,12 @@ export default Ember.Component.extend({
 
   noText: Ember.computed.empty('translatedLabel'),
 
-  @computed("title")
+  @discourseComputed("title")
   translatedTitle(title) {
     if (title) return I18n.t(title);
   },
 
-  @computed("label")
+  @discourseComputed("label")
   translatedLabel(label) {
 
     // if (label) return I18n.t(label);

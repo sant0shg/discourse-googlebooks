@@ -1,4 +1,4 @@
-import property from 'ember-addons/ember-computed-decorators';
+import discourseComputed from "discourse-common/utils/decorators";
 import Category from 'discourse/models/category';
 
 export default {
@@ -8,7 +8,7 @@ export default {
 
     Category.reopen({
 
-      @property('custom_fields.google_books_enabled')
+      @discourseComputed('custom_fields.google_books_enabled')
       google_books_enabled: {
         get(enableField) {
           return enableField === "true";

@@ -1,10 +1,8 @@
 import Composer from 'discourse/models/composer';
 import ComposerController from 'discourse/controllers/composer';
 import Category from 'discourse/models/category';
-import property from 'ember-addons/ember-computed-decorators';
 import { ajax } from 'discourse/lib/ajax';
-import  composerEditor  from 'discourse/components/composer-editor';
-import { default as computed, on, observes } from 'ember-addons/ember-computed-decorators';
+import composerEditor  from 'discourse/components/composer-editor';
 
 export default {
     name: "googlebooks",
